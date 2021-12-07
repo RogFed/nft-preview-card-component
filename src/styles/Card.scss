@@ -1,5 +1,5 @@
 .Card {
-  max-width: 375px;
+  max-width: 355px;
   width: 100%;
   margin: auto;
   background: var(--card-bg);
@@ -16,7 +16,7 @@
     width: 100%;
     min-height: 330px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     border-radius: 10px;
     overflow: hidden;
 
