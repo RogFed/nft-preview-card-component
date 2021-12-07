@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    // Background
+    --bg-color: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --white: hsl(0, 0%, 100%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan-hover: hsl(178, 100%, 50%, .5);
+    --line: hsl(215, 32%, 27%);
+
+    // Sizes
+    --base-font-size: 1.8rem;
+    --base-margin: calc(1.8rem + 0.2rem);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,4 +23,21 @@
 
 html {
     font-size: 62.5%;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: 'Outfit', sans-serif;
+    font-size: var(--base-font-size);
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
 }
