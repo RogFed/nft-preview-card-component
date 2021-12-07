@@ -19,7 +19,7 @@ const cardOptions = {
 };
 
 const App = () => (
-  <main role='main'>
+  <main>
     <Card options={cardOptions} />
   </main>
 );
