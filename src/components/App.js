@@ -19,9 +19,9 @@ const cardOptions = {
 };
 
 const App = () => (
-  <>
+  <main role='main'>
     <Card options={cardOptions} />
-  </>
+  </main>
 );
 
 export default App;

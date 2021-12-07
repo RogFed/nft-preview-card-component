@@ -27,7 +27,7 @@ const Card = ({ options }) => {
         </div>
       </div>
       <div className='Card__info'>
-        <h2 className='Card__title'>{title}</h2>
+        <h1 className='Card__title'>{title}</h1>
         <p className='Card__text'>{description}</p>
         <div className='Card__qty'>
           <div className='Card__amount'>
