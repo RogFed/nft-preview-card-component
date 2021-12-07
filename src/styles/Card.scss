@@ -1,0 +1,133 @@
+.Card {
+  max-width: 375px;
+  width: 100%;
+  margin: auto;
+  background: var(--card-bg);
+  padding: calc(375px * 0.06);
+  border-radius: 10px;
+  box-shadow:
+          0 25px 25px 15px hsl(216, 50%, 8%),
+          0 10px 35px 25px hsl(216, 50%, 15%);
+
+  &__image {
+    margin-bottom: var(--base-margin);
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    min-height: 330px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__details {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: transparent;
+      transition: .5s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & img {
+        opacity: 0;
+      }
+    }
+
+    &:hover &__details {
+      background: var(--cyan-hover);
+
+      & img {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__title {
+    color: var(--white);
+    font-size: calc(var(--base-font-size) + 0.7rem);
+    font-weight: 600;
+    margin-bottom: var(--base-margin);
+    transition: .3s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--cyan);
+    }
+  }
+
+  &__text {
+    color: var(--soft-blue);
+    margin-bottom: var(--base-margin);
+    font-weight: 300;
+  }
+
+  &__qty {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__amount {
+    display: flex;
+    color: var(--cyan);
+    font-weight: 600;
+  }
+
+  &__coin__icon {
+    margin-right: 5px;
+    max-width: 11px;
+    max-height: 18px;
+  }
+
+  &__timeLeft {
+    display: flex;
+    align-items: center;
+    color: var(--soft-blue);
+
+    &__icon {
+      margin-right: 5px;
+      max-width: 17px;
+      max-height: 17px;
+    }
+  }
+
+  &__creator {
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    color: var(--soft-blue);
+
+    & span {
+      color: var(--white);
+      transition: .3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--cyan);
+      }
+    }
+  }
+
+  &__avatar {
+    max-width: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    margin-right: var(--base-margin);
+  }
+
+  &__name {
+    font-weight: 300;
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--line);
+    margin: var(--base-margin) 0;
+  }
+}
