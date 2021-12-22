@@ -1,44 +1,46 @@
 .Card {
-  max-width: 355px;
+  max-width: 375px;
   width: 100%;
-  margin: auto;
+  margin: auto 1.5rem;
   background: var(--card-bg);
-  padding: calc(375px * 0.06);
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 1rem;
   box-shadow:
           0 25px 25px 15px hsl(216, 50%, 8%),
           0 10px 35px 25px hsl(216, 50%, 15%);
+
+  @media screen and (min-width: 376px) {
+    margin: auto;
+  }
 
   &__image {
     margin-bottom: var(--base-margin);
     cursor: pointer;
     position: relative;
-    width: 100%;
-    min-height: 330px;
+    min-height: 300px;
     background-position: center;
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 1rem;
     overflow: hidden;
 
     &__details {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
       background: transparent;
       transition: .5s ease;
-      display: flex;
       justify-content: center;
       align-items: center;
+      display: flex;
+      min-height: inherit;
+      width: 0;
 
       & img {
         opacity: 0;
+        transition: .3s ease;
       }
     }
 
-    &:hover &__details {
+    &:hover &__details, &:active &__details {
       background: var(--cyan-hover);
+      width: 100%;
 
       & img {
         opacity: 1;
@@ -53,8 +55,9 @@
     margin-bottom: var(--base-margin);
     transition: .3s ease;
     cursor: pointer;
+    width: max-content;
 
-    &:hover {
+    &:hover, &:active {
       color: var(--cyan);
     }
   }
@@ -74,10 +77,11 @@
     display: flex;
     color: var(--cyan);
     font-weight: 600;
+    align-items: center;
   }
 
   &__coin__icon {
-    margin-right: 5px;
+    margin-right: .5rem;
     max-width: 11px;
     max-height: 18px;
   }
@@ -88,7 +92,7 @@
     color: var(--soft-blue);
 
     &__icon {
-      margin-right: 5px;
+      margin-right: .5rem;
       max-width: 17px;
       max-height: 17px;
     }
@@ -107,7 +111,7 @@
       transition: .3s ease;
       cursor: pointer;
 
-      &:hover {
+      &:hover, &:active {
         color: var(--cyan);
       }
     }
